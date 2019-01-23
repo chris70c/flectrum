@@ -1,0 +1,273 @@
+.neoart {
+  cursor:                 default;
+  font:                   normal 22px/26px Oswald;
+  margin:                 0 auto;
+ -moz-user-select:        none;
+ -webkit-user-select:     none;
+  user-select:            none;
+}
+.neoart button, .neoart .button, .neoart .file {
+  box-sizing:             border-box;
+  color:                  inherit;
+  cursor:                 default;
+  display:                inline-block;
+  font:                   inherit;
+  margin:                 0;
+  outline:                0;
+  text-align:             center;
+  text-transform:         uppercase;
+  vertical-align:         top;
+}
+.neoart button, .neoart .button {
+  background:             linear-gradient([color2], [color4]);
+  border:                 1px solid [color6];
+  overflow:               hidden;
+  padding:                3px 0;
+  text-decoration:        none;
+}
+.neoart button.down {
+  background:             linear-gradient([color11], [color10]);
+  border-color:           [color12];
+  color:                  [color12];
+  padding:                4px 0 2px;
+}
+.neoart button:focus, .neoart .button:focus {
+  outline:                2px solid [color13];
+}
+.neoart button:disabled, .neoart .button.disabled, .neoart input[type=file]:disabled + b {
+  background:             [color3];
+  border-color:           [color4];
+  color:                  [color4];
+  pointer-events:         none;
+}
+.neoart button::-moz-focus-inner, .neoart input[type=color]::-moz-focus-inner {
+  border:                 0;
+}
+.neoart .file {
+  padding:                0;
+  position:               relative;
+}
+.neoart input[type=file] {
+  display:                block;
+  left:                   0;
+  min-height:             100%;
+  min-width:              100%;
+  opacity:                0;
+  position:               absolute;
+  top:                    0;
+  z-index:                90;
+}
+.neoart input[type=file] + b {
+  background:             linear-gradient([color2], [color4]);
+  border:                 1px solid [color6];
+  box-sizing:             border-box;
+  display:                inline-block;
+  font-weight:            normal;
+  padding:                3px 0;
+  width:                  100%;
+}
+.neoart input[type=file]:focus + b {
+  outline:                2px solid [color13];
+}
+.neoart input[type=color] {
+  background:             linear-gradient([color2], [color4]);
+  border:                 1px solid [color6];
+  border-radius:          0;
+  box-sizing:             border-box;
+  display:                inline-block;
+  height:                 34px;
+  margin:                 0;
+  outline:                0;
+  padding:                4px;
+  vertical-align:         top;
+}
+.neoart input[type=color]:focus {
+  outline:                2px solid [color13];
+  outline-offset:         0;
+}
+.neoart input[type=color]::-webkit-color-swatch {
+  border-color:           [color6];
+}
+.neoart input[type=color]::-webkit-color-swatch-wrapper {
+  padding:                0;
+}
+.neoart input[type=checkbox], .neoart input[type=radio] {
+ -moz-appearance:         none;
+ -webkit-appearance:      none;
+  background:             linear-gradient([color2], [color4]);
+  background-repeat:      no-repeat, no-repeat, repeat;
+  border:                 1px solid [color6];
+  border-radius:          0;
+  cursor:                 default;
+  height:                 19px;
+  margin:                 0 5px 0 0;
+  outline:                0;
+ -webkit-transform:       translatey(1px);
+  transform:              translatey(1px);
+  width:                  19px;
+}
+.neoart input[type=checkbox] {
+  background-image:       linear-gradient([color1], [color1]), linear-gradient([color6], [color6]), linear-gradient([color2], [color4]);
+  background-position:    4px 4px, 3px 3px, 0 0;
+  background-size:        4px 9px, 6px 11px, 100% 100%;
+ -webkit-transition:      background-position 0.1s;
+  transition:             background-position 0.1s;
+}
+.neoart input[type=checkbox]:checked, .neoart input[type=radio]:checked {
+  background-image:       linear-gradient([color1], [color1]), linear-gradient([color12], [color12]), linear-gradient([color10], [color11]);
+  border-color:           [color12];
+}
+.neoart input[type=checkbox]:checked {
+  background-position:    9px 4px, 8px 3px, 0 0;
+}
+.neoart input[type=radio]:checked {
+  background-position:    4px 4px, 3px 3px, 0 0;
+  background-size:        9px 9px, 11px 11px, 100% 100%;
+}
+.neoart input[type=checkbox]:focus, .neoart input[type=radio]:focus {
+  outline:                2px solid [color13];
+}
+.neoart input[type=checkbox]:disabled, .neoart input[type=radio]:disabled, .neoart input[type=radio]:disabled:checked {
+  background-color:       [color3];
+  background-image:       linear-gradient([color1], [color1]), linear-gradient([color4], [color4]);
+  border-color:           [color4];
+}
+.neoart input[type=radio]:disabled {
+  background-image:       none;
+}
+.neoart input[type=checkbox] + span[data-unchecked]::before {
+  content:                attr(data-unchecked);
+}
+.neoart input[type=checkbox]:checked + span[data-checked]::before {
+  content:                attr(data-checked);
+}
+.neoart input[type=checkbox]:disabled + span, .neoart input[type=radio]:disabled + span {
+  color:                  [color4];
+}
+.neoart input[type=range] {
+ -moz-appearance:         none;
+ -webkit-appearance:      none;
+  background:             none;
+  font:                   inherit;
+  height:                 19px;
+  margin:                 0;
+  outline:                0;
+  padding:                0;
+ -webkit-tranform:        translatey(1px);
+  transform:              translatey(1px);
+  vertical-align:         baseline;
+}
+.neoart input[type=range]::-webkit-slider-runnable-track {
+  background:             [color5];
+  height:                 1px;
+}
+.neoart input[type=range]::-webkit-slider-thumb {
+ -webkit-appearance:      none;
+  background:             linear-gradient([color2], [color4]);
+  border:                 1px solid [color6];
+  height:                 19px;
+  margin-top:            -9px;
+  width:                  12px;
+}
+.neoart input[type=range]::-moz-range-track {
+  background:             [color5];
+  height:                 1px;
+}
+.neoart input[type=range]::-moz-range-thumb {
+  background:             linear-gradient([color2], [color4]);
+  border:                 1px solid [color6];
+  border-radius:          0;
+  height:                 17px;
+  width:                  10px;
+}
+.neoart input[type=range]::-moz-focus-outer {
+  border:                 0;
+}
+.neoart input[type=range]::-ms-track {
+  border:                 0;
+  color:                  none;
+  height:                 1px;
+}
+.neoart input[type=range]::-ms-fill-lower {
+  background:             [color5];
+}
+.neoart input[type=range]::-ms-fill-upper {
+  background:             [color4];
+}
+.neoart input[type=range]::-ms-thumb {
+  background:             linear-gradient([color2], [color4]);
+  border:                 1px solid [color6];
+  height:                 17px;
+  margin-top:             0;
+  width:                  10px;
+}
+.neoart input[type=range]::-ms-tooltip {
+  display:                none;
+}
+.neoart input[type=range]:focus::-webkit-slider-thumb {
+  background:             [color13];
+  border-color:           [color14];
+}
+.neoart input[type=range]:focus::-moz-range-thumb {
+  background:             [color13];
+  border-color:           [color14];
+}
+.neoart input[type=range]:disabled::-webkit-slider-runnable-track {
+  background:             [color4];
+}
+.neoart input[type=range]:disabled::-webkit-slider-thumb {
+  background:             [color3];
+  border-color:           [color4];
+}
+.neoart input[type=range]:disabled::-moz-range-track {
+  background:             [color4];
+}
+.neoart input[type=range]:disabled::-moz-range-thumb {
+  background:             [color3];
+  border-color:           [color4];
+}
+.neoart input[type=range]:disabled::-ms-fill-lower {
+  background:             [color4];
+}
+.neoart input[type=range]:disabled::-ms-fill-upper {
+  background:             [color4];
+}
+.neoart input[type=range]:disabled::-ms-thumb {
+  background:             [color3];
+  border-color:           [color4];
+}
+.neoart select {
+ -moz-appearance:         none;
+ -webkit-appearance:      none;
+  background:             url(data:image/svg+xml;base64,[image1]) no-repeat right 4px center;
+  box-sizing:             border-box;
+  border:                 0;
+  color:                  inherit;
+  font:                   inherit;
+  height:                 30px;
+  margin-left:           -4px;
+  padding:                0 17px 0 0;
+  outline:                0;
+  outline-offset:         0;
+ -webkit-padding-start:   4px;
+}
+.neoart select:focus {
+  outline:                2px solid [color13];
+}
+.neoart select:disabled {
+  background-image:       url(data:image/svg+xml;base64,[image2]);
+  color:                  [color4];
+}
+.neoart select:-moz-focusring {
+  color:                  transparent;
+  text-shadow:            0 0 0 [color7];
+}
+@supports (-ms-ime-align:auto) {
+  .neoart input[type=color] {
+    padding:              1px 3px;
+  }
+  .neoart input[type=range]:focus {
+    outline:              2px solid [color13];
+    outline-offset:       2px;
+  }
+}

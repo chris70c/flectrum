@@ -1,0 +1,153 @@
+#browser {
+  background:             [color1];
+  color:                  [color7];
+  cursor:                 default;
+  display:                none;
+  font:                   normal 20px/25px Oswald;
+  height:                 100%;
+  left:                   0;
+  position:               fixed;
+  top:                    0;
+ -moz-user-select:        none;
+ -ms-user-select:         none;
+ -webkit-user-select:     none;
+  user-select:            none;
+  width:                  100%;
+  z-index:                99;
+}
+#browser section {
+  height:                 calc(100% - 82px);
+  overflow:               auto;
+}
+#browser article {
+  align-content:          flex-start;
+  display:                flex;
+  flex-flow:              column wrap;
+  height:                 100%;
+ -webkit-tap-highlight-color: transparent;
+}
+#browser article label {
+  border:                 1px solid transparent;
+  color:                  [color18];
+  display:                inline-block;
+  margin:                 0;
+  padding:                3px 10px 3px 28px;
+  pointer-events:         none;
+  white-space:            nowrap;
+}
+#browser b {
+  font-weight:            normal;
+}
+#browser figure {
+  border:                 1px solid transparent;
+  display:                inline-block;
+  margin:                 0;
+  padding:                3px 0;
+ -webkit-tap-highlight-color: transparent;
+}
+#browser figure:hover {
+  background:             [color9];
+}
+#browser figcaption {
+  background:             url(../browser/icons.png) no-repeat;
+  background-clip:        padding-box;
+  padding:                0 10px 0 28px;
+  pointer-events:         none;
+  white-space:            nowrap;
+}
+#browser > figure {
+  display:                none;
+  font-size:              22px;
+  letter-spacing:         2px;
+}
+#browser div {
+  bottom:                 0;
+  left:                   0;
+  position:               absolute;
+  text-align:             center;
+  width:                  100%;
+}
+#browser div p {
+  border:                 1px solid [color4];
+  border-left:            0;
+  border-right:           0;
+  margin:                 0;
+  padding:                2px 0;
+  text-align:             left;
+}
+#browser div p::before {
+  content:                "Filename";
+  display:                inline-block;
+  padding:                0 10px;
+}
+#browser div label {
+  border-left:            1px solid [color4];
+  display:                inline-block;
+  height:                 25px;
+  padding-left:           10px;
+  vertical-align:         top;
+}
+#browser button {
+  margin:                 7px;
+  width:                  30%;
+}
+#browser h3 {
+  background:             rgba(0,0,0,0.8);
+  box-sizing:             border-box;
+  color:                  [color4];
+  display:                none;
+  font:                   normal 50px Oswald;
+  height:                 100%;
+  left:                   0;
+  letter-spacing:         1px;
+  margin:                 0;
+  padding-top:            50px;
+  position:               absolute;
+  text-align:             center;
+  text-transform:         uppercase;
+  top:                    0;
+  width:                  100%;
+}
+#browser.show section {
+  height:                 calc(100% - 115px);
+}
+#browser.show > figure {
+  display:                block;
+}
+#browser .selected {
+  background:             [color9];
+  border-color:           [color11];
+}
+#browser.wait h3 {
+  display:                block;
+}
+#browser b figcaption {
+  background-position:    0 -25px;
+}
+#browser span figcaption {
+  background-position:    0 50px;
+}
+#browser figcaption.zip {
+  background-position:    0 -50px;
+}
+#browser figcaption.sid {
+  background-position:    0 -75px;
+}
+@media only screen and (max-width:567px) {
+  #browser article {
+    flex-wrap:            nowrap;
+  }
+  #browser article figure {
+    border-left:          0;
+    border-right:         0;
+    display:              block;
+    padding-left:         1px;
+  }
+  #browser div p:before {
+    content:              "";
+    padding:              0;
+  }
+  #browser div label {
+    border:               0;
+  }
+}

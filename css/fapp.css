@@ -1,0 +1,348 @@
+.fapp {
+  background:             [color1];
+  border:                 1px solid [color8];
+  color:                  [color7];
+  margin:                 10px auto;
+  position:               relative;
+  width:                  768px;
+}
+.fapp header {
+  background:             [color1];
+  padding:                5px 9px 9px;
+}
+.fapp header ul {
+  left:                   9px;
+  list-style:             none;
+  margin:                 0;
+  padding:                0;
+  position:               absolute;
+  top:                    9px;
+}
+.fapp header li {
+  background:             linear-gradient([color11], [color10]);
+  border:                 1px solid [color12];
+  display:                inline-block;
+  height:                 16px;
+  margin:                 0 4px 0 0;
+  vertical-align:         top;
+  width:                  16px;
+}
+.fapp header li.down {
+  background:             [color15];
+  border-color:           [color16];
+}
+.fapp h1 {
+  font:                   inherit;
+  margin:                 0;
+  text-align:             right;
+}
+.fapp h1 span {
+  padding-right:          9px;
+  text-transform:         uppercase;
+}
+.fapp h2 {
+  background:             linear-gradient([color11], [color10]);
+  border:                 2px solid [color12];
+  font:                   inherit;
+  margin:                 4px 0 0;
+  padding:                10px 0 9px;
+  position:               relative;
+  text-align:             center;
+  text-transform:         uppercase;
+}
+.fapp h2::before {
+  color:                  [color12];
+  content:                attr(data-desktop);
+}
+.fapp h2 span {
+  align-items:            center;
+  border:                 2px solid [color12];
+  display:                flex;
+  height:                 100%;
+  justify-content:        center;
+  position:               absolute;
+  right:                 -2px;
+  top:                   -2px;
+  width:                  20px;
+  z-index:                92;
+}
+.fapp h2 span::before {
+  border:                 1px solid [color8];
+  content:                "";
+  display:                block;
+  height:                 8px;
+  transition:             border-color 0.2s;
+  width:                  8px;
+}
+.fapp h2 span:hover::before {
+  border-color:           [color1]!important;
+}
+.fapp article {
+  box-sizing:             border-box;
+  border-top:             1px solid [color4];
+  overflow:               hidden;
+  padding:                9px 20px 0;
+  width:                  100%;
+}
+.fapp aside {
+  background:             [color1];
+  left:                  -1px;
+  position:               absolute;
+  width:                  calc(100% + 2px);
+  z-index:                90;
+}
+.fapp aside article {
+  border:                 1px solid [color8];
+  border-top-color:       [color4];
+  text-align:             center;
+}
+.fapp aside a {
+  color:                  [color12];
+  text-decoration:        none;
+}
+.fapp aside h3 {
+  color:                  [color12];
+  font-size:              22px;
+  font-weight:            normal;
+  margin:                 10px 0;
+  text-transform:         uppercase;
+}
+.fapp aside p {
+  margin:                 10px 0;
+}
+.fapp div {
+  display:                flex;
+  flex-direction:         column;
+}
+.fapp figure {
+  margin:                 0;
+  padding:                0;
+}
+.fapp figure article {
+  display:                flex;
+  justify-content:        space-around;
+  padding-bottom:         9px;
+}
+.fapp figure div {
+  background:             [color8];
+  display:                block;
+  border:                 1px solid [color8];
+}
+.fapp aside, .fapp figure, .fapp section {
+  overflow:               hidden;
+  transition:             height 0.3s;
+}
+.fapp .collapsed {
+  height:                 0!important;
+}
+.fapp button, .fapp .button {
+  float:                  left;
+  margin:                 0 0 9px 24px;
+  width:                  152px;
+}
+.fapp input[type=range] {
+  width:                  513px;
+}
+.fapp select {
+  width:                  517px;
+}
+.fapp label {
+  display:                inline-block;
+  padding:                4px 19px 13px 24px;
+  text-align:             right;
+  width:                  72px;
+}
+.fapp output, .fapp span {
+  color:                  [color12];
+  display:                inline-block;
+}
+.fapp output {
+  outline:                0;
+  padding-left:           19px;
+  text-align:             center;
+  width:                  47px;
+}
+.mobile .fapp {
+  border:                 0;
+  margin:                 0 auto;
+}
+.mobile .fapp h2::before {
+  content:                attr(data-mobile);
+}
+#position + output {
+  text-align:             left;
+}
+@media only screen and (min-width:1024px) {
+  .fapp {
+    background:           [color1] linear-gradient([color4], [color4]) repeat-y 50%;
+    background-size:      1px auto;
+    width:                1023px;
+  }
+  .fapp article {
+    padding:              9px 0 0;
+  }
+  .fapp div {
+    flex-direction:       row;
+  }
+  .fapp div section {
+    flex-basis:           511px;
+  }
+  .fapp div > :nth-child(even), .fapp figure article > :nth-child(even) {
+    margin-left:          1px;
+  }
+  .fapp button, .fapp .button {
+    margin:               0 0 9px 19px;
+    width:                104px;
+  }
+  .fapp input[type=range] {
+    width:                322px;
+  }
+  .fapp select {
+    width:                326px;
+  }
+  .fapp label {
+    padding:              4px 11px 13px 19px;
+  }
+  .fapp output {
+    padding-left:         11px;
+  }
+}
+@media only screen and (max-width:767px) {
+  .fapp {
+    width:                720px;
+  }
+  .fapp button, .fapp .button {
+    margin:               0 0 9px 20px;
+    width:                145px;
+  }
+  .fapp input[type=range] {
+    width:                481px;
+  }
+  .fapp select {
+    width:                485px;
+  }
+  .fapp label {
+    padding:              4px 15px 13px 20px;
+  }
+  .fapp output {
+    padding-left:         15px;
+  }
+}
+@media only screen and (max-width:719px) {
+  .fapp {
+    width:                568px;
+  }
+  .fapp article {
+    padding:              9px 10px 0;
+  }
+  .fapp h1 span {
+    display:              block;
+    padding:              0;
+  }
+  .fapp button, .fapp .button {
+    margin:               0 0 9px 16px;
+    width:                117px;
+  }
+  .fapp input[type=range] {
+    width:                357px;
+  }
+  .fapp select {
+    width:                361px;
+  }
+  .fapp label {
+    padding:              4px 15px 13px 16px;
+  }
+}
+@media only screen and (max-width:567px) {
+  .fapp {
+    width:                480px;
+  }
+  .fapp button, .fapp .button {
+    margin:               0 0 9px 12px;
+    width:                100px;
+  }
+  .fapp input[type=range] {
+    width:                285px;
+  }
+  .fapp select {
+    width:                289px;
+  }
+  .fapp label {
+    padding:              3px 11px 12px 12px;
+  }
+  .fapp output {
+    padding-left:         11px;
+  }
+}
+@media only screen and (max-width:479px) {
+  .fapp {
+    font:                 normal 20px/26px Oswald;
+    width:                360px;
+  }
+  .fapp header li {
+    height:               15px;
+    width:                15px;
+  }
+  .fapp h2::before {
+    white-space:          pre;
+  }
+  .fapp article {
+    padding:              9px 0 0;
+  }
+  .fapp article button:nth-child(4n+1) {
+    margin-left:          4px;
+  }
+  .fapp figure article {
+    border-color:         [color1];
+    padding:              0;
+  }
+  .fapp figure div {
+    border:               0;
+  }
+  .fapp button, .fapp .button {
+    line-height:          25px;
+    margin:               0 0 9px 8px;
+    width:                82px;
+  }
+  .fapp input[type=range] {
+    width:                220px;
+  }
+  .fapp select {
+    width:                279px;
+  }
+  .fapp label {
+    padding:              2px 7px 10px 4px;
+    width:                65px;
+  }
+  .fapp output {
+    padding-left:         8px;
+    width:                43px;
+  }
+}
+@media only screen and (max-width:359px) {
+  .fapp {
+    width:                320px;
+  }
+  .fapp article {
+    padding-top:          6px;
+  }
+  .fapp article button:nth-child(4n+1) {
+    margin-left:          2px;
+  }
+  .fapp button, .fapp .button {
+    margin:               0 0 6px 4px;
+    width:                76px;
+  }
+  .fapp input[type=range] {
+    width:                194px;
+  }
+  .fapp select {
+    width:                248px;
+  }
+  .fapp label {
+    padding:              2px 3px 7px 2px;
+  }
+  .fapp output {
+    padding-left:         2px;
+  }
+}

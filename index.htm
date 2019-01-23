@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Flectrum Demo</title>
+  <link type="text/css" rel="stylesheet" media="all" href="flectrum-demo/flectrum-demo.php">
+  <script type="text/javascript" src="flectrum/flectrum.php"></script>
+  <script type="text/javascript" src="flod-compiled.js"></script>
+  <script type="text/javascript" src="browser/browser.js"></script>
+  <script type="text/javascript" src="flectrum-demo/flectrum-demo.js"></script>
+</head>
+<body data-module="flectrum-demo/assets/Diffusion.zip">
+  <div class="neoart">
+    <section class="meters"></section>
+    <div class="fapp flectrum">
+      <header>
+        <ul>
+          <li data-id="about" class="down"></li>
+          <li data-id="buttons"></li>
+          <li data-id="controls1"></li>
+          <li data-id="controls2"></li>
+          <li data-id="meters"></li>
+        </ul>
+        <h1><span>FLECTRUM 1.1 (16/12/15)</span>Christian Corti | NEOART Costa Rica</h1>
+      </header>
+      <aside id="about" class="collapsed">
+        <article>
+          <h3>Welcome to Flectrum!</h3>
+        </article>
+      </aside>
+      <section id="buttons">
+        <div>
+          <article>
+            <button type="button" id="browse">Browse</button>
+            <button type="button" id="play" disabled>Play</button>
+            <button type="button" id="pause" disabled>Pause</button>
+            <button type="button" id="stop" disabled>Stop</button>
+          </article>
+          <article>
+            <button type="button" id="lactive">Left</button>
+            <button type="button" id="ractive">Right</button>
+          </article>
+        </div>
+      </section>
+      <div>
+        <section id="controls1">
+          <article>
+            <label title="Meter enabled">Enabled</label>
+            <input type="checkbox" id="state" checked><span data-checked="On" data-unchecked="Off"></span>
+            <br>
+            <label title="Background enabled">Background</label>
+            <input type="checkbox" id="background" checked><span data-checked="On" data-unchecked="Off"></span>
+            <br>
+            <label title="Meter visual">Visual</label>
+            <select id="visual">
+              <option selected>Basic</option>
+              <option>Split</option>
+              <option>Stripe</option>
+              <option>Inward</option>
+              <option>Outward</option>
+            </select>
+            <br>
+            <label title="Meter channels">Channels</label>
+            <select id="channels">
+              <option selected>Both</option>
+              <option>Left</option>
+              <option>Right</option>
+              <option>Stereo</option>
+            </select>
+            <br>
+            <label title="Meter domain">Domain</label>
+            <input type="radio" name="domain" id="domain0" checked>Frequency
+            <input type="radio" name="domain" id="domain1" class="time">Time
+            <br>
+            <label title="Time smoothing">Smoothing</label>
+            <input type="range" id="smooth" min="0.0" max="1.0" step="0.1" value="0.0" autocomplete="off">
+            <output tabindex="-1">0.0</output>
+            <br>
+            <label title="Fadeout speed">Fade Speed</label>
+            <input type="range" id="fadespeed" min="1" max="10" step="1" value="1" autocomplete="off">
+            <output tabindex="-1">1</output>
+            <br>
+            <label title="Space in between">Mid Spacing</label>
+            <input type="range" id="midspace" min="0" max="12" step="1" value="6" autocomplete="off">
+            <output tabindex="-1">6</output>
+          </article>
+          <article>
+            <label title="Meter mode">Mode</label>
+            <select id="metermode">
+              <option selected>Gradient</option>
+              <option>Image</option>
+              <option>Color</option>
+              <option>Foreground</option>
+            </select>
+            <br>
+            <label title="Meter opacity">Opacity</label>
+            <input type="range" id="meteralpha" min="0.0" max="1.0" step="0.1" value="1.0" autocomplete="off">
+            <output tabindex="-1">1.0</output>
+            <br>
+            <section class="desktop">
+              <label title="Foreground">Foreground</label>
+              <span class="file"><input type="file" id="foreimage"><b>Browse</b></span>
+            </section>
+          </article>
+          <article>
+            <label title="Columns">Columns</label>
+            <input type="range" id="cols" min="2" max="64" step="1" value="32" autocomplete="off">
+            <output tabindex="-1">32</output>
+            <br>
+            <label title="Column width">Col Width</label>
+            <input type="range" id="colsize" min="2" max="12" step="1" value="10" autocomplete="off">
+            <output tabindex="-1">10</output>
+            <br>
+            <label title="Column spacing">Col Spacing</label>
+            <input type="range" id="colspace" min="0" max="6" step="1" value="1" autocomplete="off">
+            <output tabindex="-1">1</output>
+            <br>
+            <label title="Rows">Rows</label>
+            <input type="range" id="rows" min="2" max="64" step="1" value="64" autocomplete="off">
+            <output tabindex="-1">64</output>
+            <br>
+            <label title="Row height">Row Height</label>
+            <input type="range" id="rowsize" min="2" max="12" step="1" value="3" autocomplete="off">
+            <output tabindex="-1">3</output>
+            <br>
+            <label title="Row spacing">Row Spacing</label>
+            <input type="range" id="rowspace" min="0" max="6" step="1" value="1" autocomplete="off">
+            <output tabindex="-1">1</output>
+          </article>
+        </section>
+        <section id="controls2">
+          <article>
+            <label title="Background mode">Mode</label>
+            <select id="backmode">
+              <option selected>Clone</option>
+              <option>Gradient</option>
+              <option>Color</option>
+              <option>Image</option>
+            </select>
+            <br>
+            <label title="Background opacity">Opacity</label>
+            <input type="range" id="backalpha" min="0.0" max="1.0" step="0.1" value="0.2" autocomplete="off">
+            <output tabindex="-1">0.2</output>
+            <br>
+            <label title="Background gradient">Gradient</label>
+            <input type="range" id="backgrad" min="0" max="4" step="1" value="0" autocomplete="off">
+            <canvas class="gradient"></canvas>
+            <br>
+            <label title="Background color">Color</label>
+            <input type="color" id="backcolor">
+            <br>
+            <section class="desktop">
+              <label title="Background image">Image</label>
+              <span class="file"><input type="file" id="backimage"><b>Browse</b></span>
+            </section>
+            <br>
+            <label title="Background on top">Above</label>
+            <input type="checkbox" id="backabove"><span data-checked="On" data-unchecked="Off"></span>
+            <br>
+            <label title="Background beat">Beat</label>
+            <input type="checkbox" id="backbeat"><span data-checked="On" data-unchecked="Off"></span>
+            <br>
+            <label type="Beat intensity">Intensity</label>
+            <input type="range" id="intensity" min="0.0" max="1.0" step="0.1" value="0.7" autocomplete="off">
+            <output tabindex="-1">0.7</output>
+          </article>
+          <article>
+            <label title="Peaks enabled">Peaks</label>
+            <input type="checkbox" id="peaks" checked><span data-checked="On" data-unchecked="Off"></span>
+            <br>
+            <label title="Peak decay time">Peak Decay</label>
+            <input type="range" id="peakdecay" min="0.01" max="0.1" step="0.01" value="0.02" autocomplete="off">
+            <output tabindex="-1">0.02</output>
+            <br>
+            <label title="Peak opacity">Peak Opacity</label>
+            <input type="range" id="peakalpha" min="0.0" max="1.0" step="0.1" value="1.0" autocomplete="off">
+            <output tabindex="-1">1.0</output>
+          </article>
+          <article>
+            <label title="Meter decay enabled">Decay</label>
+            <input type="checkbox" id="meterdecay"><span data-checked="On" data-unchecked="Off"></span>
+            <br>
+            <label title="Meter decay time">Time</label>
+            <input type="range" id="decaytime" min="0.02" max="0.2" step="0.01" value="0.08" autocomplete="off">
+            <output tabindex="-1">0.08</output>
+            <br>
+            <label title="Meter fades enabled">Fades</label>
+            <input type="checkbox" id="fades"><span data-checked="On" data-unchecked="Off"></span>
+            <br>
+            <label title="Meter fade gradient">Gradient</label>
+            <input type="range" id="fadegrad" min="0" max="3" step="1" value="0" autocomplete="off">
+            <canvas class="gradient"></canvas>
+            <br>
+            <label title="Meter trails enabled">Trails</label>
+            <input type="checkbox" id="trails"><span data-checked="On" data-unchecked="Off"></span>
+            <br>
+            <label title="Meter trails opacity">Opacity</label>
+            <input type="range" id="trailalpha" min="0.1" max="0.9" step="0.1" value="0.7" autocomplete="off">
+            <output tabindex="-1">0.7</output>
+          </article>
+        </section>
+      </div>
+      <section id="meters">
+        <div>
+          <article>
+            <label title="Left meter gradient">Gradient</label>
+            <input type="range" id="l_grad" min="0" max="4" step="1" value="0" autocomplete="off">
+            <canvas class="gradient"></canvas>
+            <br>
+            <label title="Left meter color">Color</label>
+            <input type="color" id="l_color">
+            <br>
+            <section class="desktop">
+              <label title="Left meter image">Image</label>
+              <span class="file"><input type="file" id="l_image"><b>Browse</b></span>
+            </section>
+          </article>
+          <article>
+            <label title="Right meter gradient">Gradient</label>
+            <input type="range" id="r_grad" min="0" max="4" step="1" value="0" autocomplete="off">
+            <canvas class="gradient"></canvas>
+            <br>
+            <label title="Right meter color">Color</label>
+            <input type="color" id="r_color">
+            <br>
+            <section class="desktop">
+              <label title="Right meter image">Image</label>
+              <span class="file"><input type="file" id="r_image"><b>Browse</b></span>
+            </section>
+          </article>
+        </div>
+      </section>
+    </div>
+    <div class="assets">
+      <img id="imgback" src="flectrum-demo/assets/background.jpg" alt="Background">
+      <img id="imgfore" src="flectrum-demo/assets/foreground.jpg" alt="Foreground">
+      <img id="imgmet1" src="flectrum-demo/assets/meter1.png" alt="Left Meter">
+      <img id="imgmet2" src="flectrum-demo/assets/meter2.png" alt="Right Meter">
+    </div>
+    <div id="browser" data-path="c:\">
+      <figure><figcaption>...</figcaption></figure>
+      <section>
+        <article></article>
+      </section>
+      <div>
+        <p><label id="filename"></label></p>
+        <button type="button">Open</button>
+        <button type="button">Cancel</button>
+      </div>
+      <h3>loading...</h3>
+    </div>
+  </div>
+</body>
+</html>

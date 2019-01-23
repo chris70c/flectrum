@@ -1,0 +1,221 @@
+.flectrum {
+  font:                   normal 20px/23px Oswald;
+}
+.flectrum header {
+  padding-bottom:         7px;
+}
+.flectrum h1 {
+  padding-top:            1px;
+}
+.flectrum article {
+  padding-top:            6px;
+}
+.flectrum article span {
+  color:                  inherit;
+}
+.flectrum button, .flectrum .button, .flectrum input[type=color], .flectrum .file {
+  margin-bottom:          6px;
+  width:                  152px;
+}
+.flectrum input.time {
+  margin-left:            75px;
+}
+.flectrum input[type=color] {
+  height:                 31px;
+}
+.flectrum input[type=range] {
+  width:                  328px;
+}
+.flectrum select {
+  width:                  332px;
+}
+.flectrum label {
+  padding:                4px 19px 10px 24px;
+  width:                  152px;
+}
+.flectrum output, .flectrum .gradient {
+  margin-left:            20px;
+  padding:                0;
+  width:                  152px;
+}
+.flectrum .gradient {
+  background:             [color1];
+  border:                 1px solid [color8];
+  box-sizing:             border-box;
+  display:                inline-block;
+  height:                 19px;
+  transform:              translatey(1px);
+  vertical-align:         baseline;
+}
+.flectrum .desktop {
+  display:                inline;
+}
+.mobile .flectrum .desktop {
+  display:                none;
+}
+.meters {
+  display:                flex;
+  justify-content:        space-around;
+  width:                  100%;
+}
+.meters div {
+  background:             #000;
+  border:                 1px solid #000;
+  margin-top:             10px;
+}
+.assets {
+  display:                none;
+}
+@media only screen and (min-width:1024px) {
+  .flectrum button, .flectrum .button, .flectrum input[type=color], .flectrum .file {
+    width:                104px;
+  }
+  .flectrum input.time {
+    margin-left:          22px;
+  }
+  .flectrum input[type=range] {
+    width:                227px;
+  }
+  .flectrum select {
+    width:                231px;
+  }
+  .flectrum label {
+    padding:              4px 14px 10px 19px;
+    width:                104px;
+  }
+  .flectrum output, .flectrum .gradient {
+    margin-left:          15px;
+    width:                104px;
+  }
+}
+@media only screen and (max-width:767px) {
+  .flectrum button, .flectrum .button, .flectrum input[type=color], .flectrum .file {
+    width:                145px;
+  }
+  .flectrum input.time {
+    margin-left:          64px;
+  }
+  .flectrum input[type=range] {
+    width:                310px;
+  }
+  .flectrum select {
+    width:                314px;
+  }
+  .flectrum label {
+    padding:              4px 15px 10px 20px;
+    width:                145px;
+  }
+  .flectrum output, .flectrum .gradient {
+    margin-left:          16px;
+    width:                145px;
+  }
+}
+@media only screen and (max-width:719px) {
+  .meters {
+    align-items:          center;
+    flex-direction:       column;
+  }
+  .flectrum header {
+    padding-bottom:       6px;
+  }
+  .flectrum button, .flectrum .button, .flectrum input[type=color], .flectrum .file {
+    width:                117px;
+  }
+  .flectrum input.time {
+    margin-left:          32px;
+  }
+  .flectrum input[type=range] {
+    width:                250px;
+  }
+  .flectrum select {
+    width:                254px;
+  }
+  .flectrum label {
+    padding:              4px 11px 10px 16px;
+    width:                117px;
+  }
+  .flectrum output, .flectrum .gradient {
+    margin-left:          12px;
+    width:                117px;
+  }
+}
+@media only screen and (max-width:567px) {
+  .flectrum button, .flectrum .button, .flectrum input[type=color], .flectrum .file {
+    width:                100px;
+  }
+  .flectrum input.time {
+    margin-left:          11px;
+  }
+  .flectrum input[type=range] {
+    width:                212px;
+  }
+  .flectrum select {
+    width:                216px;
+  }
+  .flectrum label {
+    padding:              4px 7px 10px 12px;
+    width:                100px;
+  }
+  .flectrum output, .flectrum .gradient {
+    margin-left:          8px;
+    width:                100px;
+  }
+}
+@media only screen and (max-width:479px) {
+  .flectrum {
+    font:                 normal 18px/20px Oswald;
+  }
+  .flectrum h1 {
+    line-height:          23px;
+  }
+  .flectrum button, .flectrum .button, .flectrum input[type=color], .flectrum .file {
+    line-height:          19px;
+    width:                82px;
+  }
+  .flectrum input.time {
+    margin-left:          82px;
+  }
+  .flectrum input[type=color] {
+    height:               27px;
+  }
+  .flectrum input[type=range] {
+    width:                168px;
+  }
+  .flectrum select {
+    width:                172px;
+  }
+  .flectrum label {
+    padding:              5px 4px 10px 4px;
+    width:                86px;
+  }
+  .flectrum output, .flectrum .gradient {
+    margin-left:          4px;
+    width:                82px;
+  }
+}
+@media only screen and (max-width:359px) {
+  .flectrum article {
+    padding-top:          5px;
+  }
+  .flectrum button, .flectrum .button, .flectrum input[type=color], .flectrum .file {
+    margin-bottom:        5px;
+    width:                76px;
+  }
+  .flectrum input.time {
+    margin-left:          53px;
+  }
+  .flectrum input[type=range] {
+    width:                143px;
+  }
+  .flectrum select {
+    width:                147px;
+  }
+  .flectrum label {
+    padding:              5px 3px 9px 2px;
+    width:                86px;
+  }
+  .flectrum output, .flectrum .gradient {
+    margin-left:          3px;
+    width:                73px;
+  }
+}
